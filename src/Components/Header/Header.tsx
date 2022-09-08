@@ -14,6 +14,9 @@ import { AppBarProps as MuiAppBarProps } from "@mui/material/AppBar/AppBar";
 // @ts-ignore
 import { drawerWidth } from "../../App.tsx";
 
+// @ts-ignore
+import Search from "./Search.tsx";
+
 interface AppBarProps extends MuiAppBarProps {
 	open?: boolean;
 }
@@ -72,7 +75,7 @@ function Header ({ open, setOpen }) {
 					<IconButton
 						style={ { color: 'rgba(0, 0, 0, .2)' } }
 						color="inherit"
-						aria-label="search in site"
+						aria-label="messages"
 						sx={ { padding: '.75rem' } }
 					>
 						<Badge color="warning" variant="dot">
@@ -82,22 +85,14 @@ function Header ({ open, setOpen }) {
 					<IconButton
 						style={ { color: 'rgba(0, 0, 0, .2)' } }
 						color="inherit"
-						aria-label="search in site"
+						aria-label="basket"
 						sx={ { padding: '.75rem' } }
 					>
 						<FiShoppingCart color='rgba(0, 0, 0, .3)' size={22} />
 					</IconButton>
 				</div>
 				<div>
-					<IconButton
-						style={ { color: 'rgba(0, 0, 0, .2)' } }
-						color="inherit"
-						aria-label="search in site"
-						className='me-2'
-						sx={ { padding: '.75rem' } }
-					>
-						<RiSearchLine color='rgba(0, 0, 0, .3)' size={22} />
-					</IconButton>
+					<Search />
 					<IconButton
 						style={ { color: 'rgba(0, 0, 0, .2)' } }
 						color="inherit"

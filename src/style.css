@@ -12,3 +12,27 @@
 body {
     background-color: var(--light) !important;
 }
+
+.pointer {
+    cursor: pointer !important;
+}
+
+.input {
+    border: 1px solid transparent;
+    outline: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px 10px;
+}
+
+.input:hover {
+    outline: 1px solid #000;
+}
+
+input:focus {
+    border: 1px solid var(--info) !important;
+    outline: 1px solid var(--info) !important;
+}
+
+.rtl {
+    direction: rtl !important;
+}
