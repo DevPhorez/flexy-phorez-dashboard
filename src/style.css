@@ -1,0 +1,14 @@
+:root {
+    --info: rgb(3, 201, 215);
+    --warning: rgb(251, 150, 120);
+    --light: rgb(250, 251, 251);
+}
+
+::selection {
+    background-color: var(--warning);
+    color: #fff;
+}
+
+body {
+    background-color: var(--light) !important;
+}
