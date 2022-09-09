@@ -44,3 +44,7 @@ input:focus {
     padding: 9px 12px !important;
     color: #fff;
 }
+
+.bg-info {
+    background-color: var(--info) !important;
+}

@@ -59,7 +59,7 @@ const theme = createTheme({
 
 function App () {
 	const themeHook = useTheme();
-	const [open, setOpen] = React.useState(false);
+	const [open, setOpen] = React.useState(true);
 
 	const handleDrawerClose = () => {
 		setOpen(false);
