@@ -1,6 +1,7 @@
 :root {
     --info: rgb(3, 201, 215);
     --warning: rgb(251, 150, 120);
+    --yellow: rgb(254, 201, 15);
     --light: rgb(250, 251, 251);
 }
 
@@ -35,4 +36,11 @@ input:focus {
 
 .rtl {
     direction: rtl !important;
+}
+
+.badge {
+    background-color: var(--yellow);
+    border-radius: 8px;
+    padding: 9px 12px !important;
+    color: #fff;
 }
