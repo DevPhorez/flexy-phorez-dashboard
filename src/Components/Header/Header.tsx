@@ -14,6 +14,14 @@ import { AppBarProps as MuiAppBarProps } from "@mui/material/AppBar/AppBar";
 // @ts-ignore
 import { drawerWidth } from "../../App.tsx";
 
+// @ts-ignore
+import Search from "./Search.tsx";
+// @ts-ignore
+import Notifications from './Notifications.tsx';
+// @ts-ignore
+import Messages from './Messages.tsx';
+
+
 interface AppBarProps extends MuiAppBarProps {
 	open?: boolean;
 }
@@ -59,45 +67,19 @@ function Header ({ open, setOpen }) {
 						سلام, سارا
 					</Button>
 					<div style={ verticalLine }></div>
+                    <Notifications />
+					<Messages />
 					<IconButton
 						style={ { color: 'rgba(0, 0, 0, .2)' } }
 						color="inherit"
-						aria-label="notifications"
-						sx={ { padding: '.75rem' } }
-					>
-						<Badge color="info" variant="dot">
-							<RiNotification2Line color='rgba(0, 0, 0, .3)' size={22} />
-						</Badge>
-					</IconButton>
-					<IconButton
-						style={ { color: 'rgba(0, 0, 0, .2)' } }
-						color="inherit"
-						aria-label="search in site"
-						sx={ { padding: '.75rem' } }
-					>
-						<Badge color="warning" variant="dot">
-							<FiMessageSquare color='rgba(0, 0, 0, .3)' size={22} />
-						</Badge>
-					</IconButton>
-					<IconButton
-						style={ { color: 'rgba(0, 0, 0, .2)' } }
-						color="inherit"
-						aria-label="search in site"
+						aria-label="basket"
 						sx={ { padding: '.75rem' } }
 					>
 						<FiShoppingCart color='rgba(0, 0, 0, .3)' size={22} />
 					</IconButton>
 				</div>
 				<div>
-					<IconButton
-						style={ { color: 'rgba(0, 0, 0, .2)' } }
-						color="inherit"
-						aria-label="search in site"
-						className='me-2'
-						sx={ { padding: '.75rem' } }
-					>
-						<RiSearchLine color='rgba(0, 0, 0, .3)' size={22} />
-					</IconButton>
+					<Search />
 					<IconButton
 						style={ { color: 'rgba(0, 0, 0, .2)' } }
 						color="inherit"
