@@ -3,6 +3,8 @@
     --warning: rgb(251, 150, 120);
     --yellow: rgb(254, 201, 15);
     --light: rgb(250, 251, 251);
+    --gray: rgb(119, 126, 137);
+    --main-dark: rgba(0, 0, 0, .37);
 }
 
 ::selection {
@@ -47,4 +49,12 @@ input:focus {
 
 .bg-info {
     background-color: var(--info) !important;
+}
+
+.text-gray {
+    color: var(--gray) !important;
+}
+
+.text-dark {
+    color: var(--main-dark) !important
 }

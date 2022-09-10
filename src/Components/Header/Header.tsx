@@ -20,7 +20,7 @@ import Search from "./Search.tsx";
 import Notifications from './Notifications.tsx';
 // @ts-ignore
 import Messages from './Messages.tsx';
-
+import Profile from './Profile'
 
 interface AppBarProps extends MuiAppBarProps {
 	open?: boolean;
@@ -62,10 +62,7 @@ function Header ({ open, setOpen }) {
 		<AppBar className='shadow-none' sx={ { backgroundColor: 'rgb(250, 251, 251)' } } position="fixed" open={open} color={'inherit'}>
 			<Toolbar className='d-flex justify-content-between'>
 				<div className='d-flex align-items-center'>
-					<Button  variant="text" color='inherit'>
-						<Avatar className={'me-2'} alt="Remy Sharp" src="/Images/Avatar/1.jpg" />
-						سلام, سارا
-					</Button>
+					<Profile />
 					<div style={ verticalLine }></div>
                     <Notifications />
 					<Messages />
