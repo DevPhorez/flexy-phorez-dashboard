@@ -13,6 +13,8 @@ import { FiUsers, FiShoppingCart, FiCalendar } from 'react-icons/fi'
 
 import Settings from './Settings'
 
+import { NavLink } from 'react-router-dom'
+
 const DrawerHeader = styled('div')(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
@@ -52,42 +54,87 @@ function Sidebar ({ open }) {
             </DrawerHeader>
             <div className='body rtl'>
                 <p className='text-black-50 opacity-50 h5 mb-3'>داشبورد ها</p>
-
                 <ul className='list-unstyled p-0 pe-2'>
-                    <li>
-                        <Button className='d-flex justify-content-start align-items-center text-white bg-info' style={ { padding: '.85rem', borderRadius: 10, fontSize: '1.1rem' } } startIcon={<AiOutlineHome />} fullWidth color={'inherit'}>
-                            <p className="mb-0 me-4">خانه</p>
-                        </Button>
+                    <li className='mb-1'>
+                        <NavLink to='/' className='text-decoration-none text-dark'>
+                            {
+                                ({ isActive }) => (
+                                    <Button className={` ${ isActive && 'text-white bg-info' } d-flex justify-content-start align-items-center `} style={ { padding: '.65rem', borderRadius: 10, fontSize: '1.1rem' } } startIcon={<AiOutlineHome />} fullWidth color={'inherit'}>
+                                        <p className="mb-0 me-4">خانه</p>
+                                    </Button>
+                                )
+                            }
+                        </NavLink>
                     </li>
-                    <li>
-                        <Button className='d-flex justify-content-start align-items-center' style={ { padding: '.85rem', borderRadius: 10, fontSize: '1.1rem' } } startIcon={<FiCalendar />} fullWidth color={'inherit'}>
-                            <p className="mb-0 me-4">تقویم</p>
-                        </Button>
+                    <li className='mb-1'>
+                        <NavLink to='/calendar' className='text-decoration-none text-dark'>
+                            {
+                                ({ isActive}) => (
+                                    <Button
+                                        className={` ${ isActive && 'text-white bg-info'} d-flex justify-content-start align-items-center `}
+                                        style={{padding: '.65rem', borderRadius: 10, fontSize: '1.1rem'}}
+                                        startIcon={<FiCalendar/>} fullWidth color={'inherit'}>
+                                        <p className="mb-0 me-4">تقویم</p>
+                                    </Button>
+                                )
+                            }
+                        </NavLink>
                     </li>
-                    <li>
-                        <Button className='d-flex justify-content-start align-items-center ' style={ { padding: '.85rem', borderRadius: 10, fontSize: '1.1rem' } } startIcon={<AiOutlineShopping />} fullWidth color={'inherit'}>
-                            <p className="mb-0 me-4">محصولات</p>
-                        </Button>
+                    <li className='mb-1'>
+                        <NavLink to='/products' className='text-decoration-none text-dark'>
+                            {
+                                ({ isActive }) => (
+                                    <Button className={` ${ isActive && 'text-white bg-info'} d-flex justify-content-start align-items-center `} style={ { padding: '.65rem', borderRadius: 10, fontSize: '1.1rem' } } startIcon={<AiOutlineShopping />} fullWidth color={'inherit'}>
+                                        <p className="mb-0 me-4">محصولات</p>
+                                    </Button>
+                                )
+                            }
+                        </NavLink>
                     </li>
-                    <li>
-                        <Button className='d-flex justify-content-start align-items-center ' style={ { padding: '.85rem', borderRadius: 10, fontSize: '1.1rem' } } startIcon={<MdOutlineModeComment />} fullWidth color={'inherit'}>
-                            <p className="mb-0 me-4">نظرات</p>
-                        </Button>
+                    <li className='mb-1'>
+                        <NavLink to='/comments' className='text-decoration-none text-dark'>
+                            {
+                                ({ isActive }) => (
+                                    <Button className={` ${ isActive && 'text-white bg-info'} d-flex justify-content-start align-items-center `} style={ { padding: '.65rem', borderRadius: 10, fontSize: '1.1rem' } } startIcon={<MdOutlineModeComment />} fullWidth color={'inherit'}>
+                                        <p className="mb-0 me-4">نظرات</p>
+                                    </Button>
+                                )
+                            }
+
+                        </NavLink>
                     </li>
-                    <li>
-                        <Button className='d-flex justify-content-start align-items-center ' style={ { padding: '.85rem', borderRadius: 10, fontSize: '1.1rem' } } startIcon={<FiUsers />} fullWidth color={'inherit'}>
-                            <p className="mb-0 me-4">کاربران</p>
-                        </Button>
+                    <li className='mb-1'>
+                        <NavLink to='/users' className='text-decoration-none text-dark'>
+                            {
+                                ({ isActive }) => (
+                                    <Button className={` ${ isActive && 'text-white bg-info'} d-flex justify-content-start align-items-center `} style={ { padding: '.65rem', borderRadius: 10, fontSize: '1.1rem' } } startIcon={<FiUsers />} fullWidth color={'inherit'}>
+                                        <p className="mb-0 me-4">کاربران</p>
+                                    </Button>
+                                )
+                            }
+                        </NavLink>
                     </li>
-                    <li>
-                        <Button className='d-flex justify-content-start align-items-center ' style={ { padding: '.85rem', borderRadius: 10, fontSize: '1.1rem' } } startIcon={<FiShoppingCart />} fullWidth color={'inherit'}>
-                            <p className="mb-0 me-4">سفارشات</p>
-                        </Button>
+                    <li className='mb-1'>
+                        <NavLink to='/orders' className='text-decoration-none text-dark'>
+                            {
+                                ({ isActive }) => (
+                                    <Button className={` ${ isActive && 'text-white bg-info'} d-flex justify-content-start align-items-center `} style={ { padding: '.65rem', borderRadius: 10, fontSize: '1.1rem' } } startIcon={<FiShoppingCart />} fullWidth color={'inherit'}>
+                                        <p className="mb-0 me-4">سفارشات</p>
+                                    </Button>
+                                )
+                            }
+                        </NavLink>
                     </li>
-                    <li>
-                        <Button className='d-flex justify-content-start align-items-center ' style={ { padding: '.85rem', borderRadius: 10, fontSize: '1.1rem' } } startIcon={<MdOutlineLocalOffer />} fullWidth color={'inherit'}>
-                            <p className="mb-0 me-4">تخفیف ها</p>
-                        </Button>
+                    <li className='mb-1'>
+                        <NavLink to='/offers' className='text-decoration-none text-dark'>
+                            {
+                                ({ isActive }) => (
+                                    <Button className={` ${ isActive && 'text-white bg-info'} d-flex justify-content-start align-items-center `} style={ { padding: '.65rem', borderRadius: 10, fontSize: '1.1rem' } } startIcon={<MdOutlineLocalOffer />} fullWidth color={'inherit'}>
+                                        <p className="mb-0 me-4">تخفیف ها</p>
+                                    </Button>
+                                )
+                            }
+                        </NavLink>
                     </li>
                 </ul>
                 <Settings />
