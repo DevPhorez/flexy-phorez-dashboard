@@ -9,7 +9,7 @@ import { drawerWidth } from "../../App.tsx";
 
 import { AiOutlineHome, AiOutlineShopping, AiFillSetting } from 'react-icons/ai'
 import { MdOutlineModeComment, MdOutlineLocalOffer } from 'react-icons/md'
-import { FiUsers, FiShoppingCart } from 'react-icons/fi'
+import { FiUsers, FiShoppingCart, FiCalendar } from 'react-icons/fi'
 
 import Settings from './Settings'
 
@@ -57,6 +57,11 @@ function Sidebar ({ open }) {
                     <li>
                         <Button className='d-flex justify-content-start align-items-center text-white bg-info' style={ { padding: '.85rem', borderRadius: 10, fontSize: '1.1rem' } } startIcon={<AiOutlineHome />} fullWidth color={'inherit'}>
                             <p className="mb-0 me-4">خانه</p>
+                        </Button>
+                    </li>
+                    <li>
+                        <Button className='d-flex justify-content-start align-items-center' style={ { padding: '.85rem', borderRadius: 10, fontSize: '1.1rem' } } startIcon={<FiCalendar />} fullWidth color={'inherit'}>
+                            <p className="mb-0 me-4">تقویم</p>
                         </Button>
                     </li>
                     <li>

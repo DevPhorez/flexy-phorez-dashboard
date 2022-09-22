@@ -31,7 +31,7 @@ body {
     outline: 1px solid #000;
 }
 
-input:focus {
+.input:focus {
     border: 1px solid var(--info) !important;
     outline: 1px solid var(--info) !important;
 }

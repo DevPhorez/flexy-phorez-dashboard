@@ -1,0 +1,8 @@
+.backdrop {
+    backdrop-filter: blur(4px);
+}
+
+.MuiBackdrop-root {
+    background-color: rgba(0, 52, 56, .7) !important;
+    opacity: 50% !important;
+}
