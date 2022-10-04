@@ -11,7 +11,7 @@ import { AiOutlineHome, AiOutlineShopping, AiFillSetting } from 'react-icons/ai'
 import { MdOutlineModeComment, MdOutlineLocalOffer } from 'react-icons/md'
 import { FiUsers, FiShoppingCart, FiCalendar } from 'react-icons/fi'
 
-import Settings from './Settings'
+import Settings from './Settings/Settings'
 
 import { NavLink } from 'react-router-dom'
 
