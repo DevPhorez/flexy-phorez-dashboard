@@ -1,10 +1,14 @@
 :root {
     --info: rgb(3, 201, 215);
+    --info-hover: rgb(5, 178, 189);
     --warning: rgb(251, 150, 120);
+    --warning-hover: rgb(230, 126, 95);
     --yellow: rgb(254, 201, 15);
+    --red: rgb(228, 106, 118);
+    --green: rgb(0, 194, 146);
     --light: rgb(250, 251, 251);
     --gray: rgb(119, 126, 137);
-    --main-dark: rgba(0, 0, 0, .37);
+    --main-dark: rgba(0, 0, 0, 0.88);
 }
 
 ::selection {
@@ -47,8 +51,24 @@ body {
     color: #fff;
 }
 
-.bg-info {
+.bg-info, .bg-low {
     background-color: var(--info) !important;
+}
+
+.bg-warning, .bg-medium {
+    background-color: var(--warning) !important;
+}
+
+.bg-high {
+    background-color: var(--yellow) !important;
+}
+
+.bg-critical {
+    background-color: var(--red) !important;
+}
+
+.bg-moderate {
+    background-color: var(--green) !important;
 }
 
 .text-gray {
@@ -57,4 +77,22 @@ body {
 
 .text-dark {
     color: var(--main-dark) !important
+}
+
+.form-select:focus {
+    border: 2px solid var(--info) !important;
+    box-shadow: none !important;
+}
+
+
+.form-select option:hover {
+    background-color: red !important;
+    color: red !important;
+}
+
+.divider {
+    border-width: 0;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.12);
+    border-bottom-width: thin;
 }

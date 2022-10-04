@@ -14,13 +14,11 @@ import ListItemText from '@mui/material/ListItemText';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-
 // @ts-ignore
 import Header from './Components/Header/Header.tsx'
 // @ts-ignore
 import Sidebar, { DrawerHeader } from './Components/Sidebar/Sidebar.tsx';
 
-import './style.css'
 import { useRoutes } from "react-router-dom";
 
 import routes from './routes'
@@ -79,6 +77,7 @@ function App () {
                 <Main open={open}>
                     <DrawerHeader />
                     {router}
+                    <p className='text-center mt-4 mb-3'>© 2021 All rights reserved by PHOREZ</p>
                 </Main>
                 <Sidebar open={open} />
             </Box>
@@ -88,16 +87,3 @@ function App () {
 
 export { drawerWidth }
 export default App
-
-// // <List>
-// // 	{['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-// // 		<ListItem key={text} disablePadding>
-// // 			<ListItemButton>
-// // 				<ListItemIcon>
-// {/*					{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}*/}
-// {/*				</ListItemIcon>*/}
-// {/*				<ListItemText primary={text} />*/}
-// {/*			</ListItemButton>*/}
-// {/*		</ListItem>*/}
-// {/*	))}*/}
-// {/*</List>*/}
