@@ -3,16 +3,11 @@ import * as React from 'react';
 //MUI
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
-import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+import { useTheme as useThemeVar } from 'css-vars-hook';
 
 // @ts-ignore
 import Header from './Components/Header/Header.tsx'
@@ -22,6 +17,11 @@ import Sidebar, { DrawerHeader } from './Components/Sidebar/Sidebar.tsx';
 import { useRoutes } from "react-router-dom";
 
 import routes from './routes'
+
+import { ThemeContext } from './Contexts/ThemeContext'
+
+
+
 
 const drawerWidth = 240;
 
@@ -44,21 +44,33 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
 	}),
 }));
 
-
-//change mui default colors
-const { palette } = createTheme();
-const theme = createTheme({
-    palette: {
-        info: {
-            main: 'rgb(3, 201, 215)'
-        },
-        warning: {
-            main: 'rgb(251, 150, 120)'
-        },
-    }
-});
-
 function App () {
+
+    const themeVar = {
+        info: 'rgb(3, 201, 215)',
+        infoLight: 'rgba(3, 201, 215, 0.2)',
+        infoHover: 'rgb(5, 178, 189)',
+        warning: 'rgb(251, 150, 120)',
+        warningHover: 'rgb(230, 126, 95)',
+    };
+
+    const {setRef, setVariable} = useThemeVar(themeVar);
+
+    // setVariable('info', 'red');
+
+    //change mui default colors
+    const { palette } = createTheme();
+    const theme = createTheme({
+        palette: {
+            info: {
+                main: themeVar.info
+            },
+            warning: {
+                main: themeVar.warning
+            },
+        }
+    });
+
 	const themeHook = useTheme();
 	const [open, setOpen] = React.useState(true);
 
@@ -71,7 +83,7 @@ function App () {
 	// @ts-ignore
     return (
         <ThemeProvider theme={theme}>
-            <Box sx={{ display: 'flex' }}>
+            <Box ref={setRef} sx={{ display: 'flex' }}>
                 <CssBaseline />
                 <Header open={open} setOpen={setOpen} />
                 <Main open={open}>
@@ -79,7 +91,9 @@ function App () {
                     {router}
                     <p className='text-center mt-4 mb-3'>© 2021 All rights reserved by PHOREZ</p>
                 </Main>
-                <Sidebar open={open} />
+                <ThemeContext.Provider value={setVariable}>
+                    <Sidebar open={open} />
+                </ThemeContext.Provider>
             </Box>
         </ThemeProvider>
 	);

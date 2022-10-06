@@ -2,7 +2,6 @@ import * as React from "react";
 
 import { styled } from "@mui/material/styles";
 import { Drawer, Button, IconButton, Tooltip } from "@mui/material";
-import ArrowRight from '@mui/icons-material/ArrowRight';
 
 // @ts-ignore
 import { drawerWidth } from "../../App.tsx";
