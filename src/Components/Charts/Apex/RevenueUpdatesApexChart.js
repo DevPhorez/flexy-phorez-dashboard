@@ -35,7 +35,7 @@ function RevenueUpdatesApexChart () {
 			dataLabels: {
 				enabled: true,
 				style: {
-					colors: ['#51bfa0']
+					colors: ['var(--info)']
 				},
 			},
 			xaxis: {

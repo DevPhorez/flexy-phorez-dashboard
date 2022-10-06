@@ -38,7 +38,7 @@ function Home () {
 					<div className="col-4 p-0">
 						<Box>
 							<div className="d-flex justify-content-between align-items-center m-3">
-								<IconButton className=' text-white' sx={ { backgroundColor: 'var(--warning)', '&:hover': { backgroundColor: 'var(--warning-hover) !important' } } } color='inherit'>
+								<IconButton className=' text-white' sx={ { backgroundColor: 'var(--warning)', '&:hover': { backgroundColor: 'var(--warningHover) !important' } } } color='inherit'>
 									<FiDollarSign className='m-1' />
 								</IconButton>
 								<p className='mb-0 text-dark fw-bold'>درآمد کل</p>
@@ -52,7 +52,7 @@ function Home () {
 					<div className="col-3 p-0">
 						<Box>
 							<div className="d-flex justify-content-between align-items-center m-3">
-								<IconButton className='bg-info text-white' sx={ { transition: '.3s' ,'&:hover': { backgroundColor: 'var(--info-hover) !important' } } } color='inherit'>
+								<IconButton className='bg-info text-white' sx={ { transition: '.3s' ,'&:hover': { backgroundColor: 'var(--infoHover) !important' } } } color='inherit'>
 									<FiShoppingBag className='m-1' />
 								</IconButton>
 								<p className='mb-0 text-dark fw-bold'>خرید ها</p>
@@ -66,7 +66,7 @@ function Home () {
 					<div className="col-5 p-0">
 						<Box>
 							<div className="d-flex justify-content-between align-items-center m-3">
-								<IconButton className='bg-info text-white' sx={ { transition: '.3s' ,'&:hover': { backgroundColor: 'var(--info-hover) !important' } } } color='inherit'>
+								<IconButton className='bg-info text-white' sx={ { transition: '.3s' ,'&:hover': { backgroundColor: 'var(--infoHover) !important' } } } color='inherit'>
 									<FiShoppingBag className='m-1' />
 								</IconButton>
 								<p className='mb-0 text-dark fw-bold'>خرید ها</p>

@@ -2,7 +2,6 @@ import * as React from "react";
 
 import { styled } from "@mui/material/styles";
 import { Drawer, Button, IconButton, Tooltip } from "@mui/material";
-import ArrowRight from '@mui/icons-material/ArrowRight';
 
 // @ts-ignore
 import { drawerWidth } from "../../App.tsx";
@@ -11,7 +10,7 @@ import { AiOutlineHome, AiOutlineShopping, AiFillSetting } from 'react-icons/ai'
 import { MdOutlineModeComment, MdOutlineLocalOffer } from 'react-icons/md'
 import { FiUsers, FiShoppingCart, FiCalendar } from 'react-icons/fi'
 
-import Settings from './Settings'
+import Settings from './Settings/Settings'
 
 import { NavLink } from 'react-router-dom'
 

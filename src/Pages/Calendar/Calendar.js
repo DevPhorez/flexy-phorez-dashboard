@@ -53,7 +53,7 @@ function Calendar () {
 							<Button><p className='mb-0' style={ { fontSize: 18 } }>لیست</p></Button>
 							<Button><p className='mb-0' style={ { fontSize: 18 } }>روز</p></Button>
 							<Button><p className='mb-0' style={ { fontSize: 18 } }>هفته</p></Button>
-							<Button sx={ { backgroundColor: 'rgba(3, 201, 215, 0.2)' }}><p className='mb-0' style={ { fontSize: 18 } }>ماه</p></Button>
+							<Button sx={ { backgroundColor: 'var(--infoLight)' }}><p className='mb-0' style={ { fontSize: 18 } }>ماه</p></Button>
 						</ButtonGroup>
 						
 						<div className='d-flex align-items-center'>
@@ -128,7 +128,7 @@ function Calendar () {
 					</MuiModal>
 				</div>
 				<div className="col-3 border-start d-flex justify-content-center flex-wrap align-items-center d-lg-block d-none">
-					<Button fullWidth sx={ { '&:hover': { backgroundColor: 'rgb(3,181,193)' } } } color='info' variant='contained'>
+					<Button fullWidth sx={ { '&:hover': { backgroundColor: 'var(--infoHover)' } } } color='info' variant='contained'>
 						<p className='h5 text-white my-1'>اضافه کردن رویداد</p>
 					</Button>
 					<div className='text-end w-100'>

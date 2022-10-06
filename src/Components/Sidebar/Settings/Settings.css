@@ -1,0 +1,28 @@
+.color {
+    border: 1px solid #888;
+    border-radius: 8px;
+    padding: 12px !important;
+    margin: 4px 2px;
+}
+
+.color div {
+    border: 2px solid transparent;
+}
+
+.elliptical {
+    width: 27px;
+    height: 14px;
+    border-radius: 100%;
+    transform: rotate(20deg);
+}
+
+.active-elliptical {
+    transform: rotate(0);
+}
+
+.direction {
+    border: 1px solid rgba(145, 158, 171, 0.12);
+    border-radius: 6px;
+    padding: 18px 28px !important;
+    margin: 4px 2px;
+}

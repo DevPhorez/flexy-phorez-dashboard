@@ -1,11 +1,7 @@
 :root {
-    --info: rgb(3, 201, 215);
-    --info-hover: rgb(5, 178, 189);
-    --warning: rgb(251, 150, 120);
-    --warning-hover: rgb(230, 126, 95);
     --yellow: rgb(254, 201, 15);
     --red: rgb(228, 106, 118);
-    --green: rgb(0, 194, 146);
+    --green: rgb(46, 125, 50);
     --light: rgb(250, 251, 251);
     --gray: rgb(119, 126, 137);
     --main-dark: rgba(0, 0, 0, 0.88);
