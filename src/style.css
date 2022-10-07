@@ -4,12 +4,16 @@
     --green: rgb(46, 125, 50);
     --light: rgb(250, 251, 251);
     --gray: rgb(119, 126, 137);
-    --main-dark: rgba(0, 0, 0, 0.88);
+    --main-dark: rgba(0, 0, 0, 0.87);
 }
 
 ::selection {
     background-color: var(--warning);
     color: #fff;
+}
+
+* {
+    text-decoration: none !important;
 }
 
 body {
@@ -32,8 +36,8 @@ body {
 }
 
 .input:focus {
-    border: 1px solid var(--info) !important;
-    outline: 1px solid var(--info) !important;
+    border: 1px solid var(--yellow) !important;
+    outline: 1px solid var(--yellow) !important;
 }
 
 .rtl {

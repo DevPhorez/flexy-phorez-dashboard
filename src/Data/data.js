@@ -37,4 +37,19 @@ const date = [
 	}
 ]
 
-export { allNotifications, allMessages, date }
+const products = [
+	{ id: 1, title: 'بستنی قیفی', image: '1.jpg', price: 50, rate: 5 },
+	{ id: 2, title: 'گوجه فرنگی', image: '2.jpg', price: 25, rate: 3 },
+	{ id: 3, title: 'فرفره شادی', image: '3.jpg', price: 12, rate: 5 },
+	{ id: 4, title: 'جام زرین', image: '4.jpg', price: 119, rate: 4 },
+	{ id: 5, title: 'آب میوه طبیعی', image: '5.jpg', price: 28, rate: 5 },
+	{ id: 6, title: 'آب نبات چوبی فرفری', image: '6.jpg', price: 5, rate: 2 },
+	{ id: 7, title: 'نون بستنی', image: '7.jpg', price: 2.5, rate: 2 },
+	{ id: 8, title: 'هدفون بیسیم', image: '8.jpg', price: 79.99, rate: 5 },
+	{ id: 9, title: 'آب نبات چوبی', image: '9.jpg', price: .99, rate: 5 },
+	{ id: 10, title: 'آب آلبالو', image: '10.jpg', price: 7.56, rate: 5 },
+	{ id: 11, title: 'برج', image: '11.jpg', price: 758, rate: 5 },
+	{ id: 12, title: 'پیچ پیچک', image: '12.jpg', price: 3.99, rate: 5 },
+]
+
+export { allNotifications, allMessages, date, products }

@@ -3,7 +3,7 @@ import PhPopover from '../Popover/Popover.tsx';
 
 import { RiNotification2Line } from "react-icons/ri";
 
-import { allNotifications } from '../../data'
+import { allNotifications } from '../../Data/data'
 
 function Notifications () {
     return (

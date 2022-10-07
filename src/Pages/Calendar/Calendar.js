@@ -15,7 +15,7 @@ import { BsChevronRight, BsChevronLeft } from 'react-icons/bs'
 import './Calendar.css'
 import '../../Components/Modal.css'
 
-import { date as days } from '../../data'
+import { date as days } from '../../Data/data'
 
 import ModalContent from "../../Components/Calendar/Modal/ModalContent";
 import Tasks from "../../Components/Calendar/More Task/Tasks";

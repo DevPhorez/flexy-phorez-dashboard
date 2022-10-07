@@ -3,7 +3,7 @@ import PhPopover from '../Popover/Popover.tsx';
 
 import { FiMessageSquare } from "react-icons/fi";
 
-import { allMessages } from '../../data'
+import { allMessages } from '../../Data/data'
 
 function Messages () {
     return (

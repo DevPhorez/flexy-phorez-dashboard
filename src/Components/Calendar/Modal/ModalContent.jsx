@@ -18,7 +18,7 @@ import 'react-calendar/dist/Calendar.css';
 
 import './style.css'
 
-import { date as days } from '../../../data'
+import { date as days } from '../../../Data/data'
 
 const style = {
 	position: 'absolute',
