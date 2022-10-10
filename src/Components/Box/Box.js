@@ -13,6 +13,8 @@ function Box ({ children, customClasses }) {
 				padding: '0 14px 14px',
 				margin: '15px',
 			}}
+			
+			style={ { padding: customClasses } }
 			className={customClasses}
 		>
 			<Paper className={customClasses} elevation={0}>{children}</Paper>

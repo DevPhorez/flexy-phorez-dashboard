@@ -4,6 +4,7 @@
     --green: rgb(46, 125, 50);
     --light: rgb(250, 251, 251);
     --gray: rgb(119, 126, 137);
+    --dark-gray: rgba(0, 0, 0, 0.6),
     --main-dark: rgba(0, 0, 0, 0.87);
 }
 
@@ -36,8 +37,8 @@ body {
 }
 
 .input:focus {
-    border: 1px solid var(--yellow) !important;
-    outline: 1px solid var(--yellow) !important;
+    border: 1px solid var(--info);
+    outline: 1px solid var(--info);
 }
 
 .rtl {
@@ -77,6 +78,10 @@ body {
 
 .text-dark {
     color: var(--main-dark) !important
+}
+
+.text-dark-gray {
+    color: var(--dark-gray) !important
 }
 
 .form-select:focus {
