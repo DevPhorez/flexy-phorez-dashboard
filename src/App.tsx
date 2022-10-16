@@ -70,6 +70,9 @@ function App () {
             },
             secondary: {
                 main: themeVar.warning
+            },
+            primary: {
+                main: themeVar.info
             }
         }
     });

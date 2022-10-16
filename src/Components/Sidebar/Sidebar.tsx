@@ -4,12 +4,13 @@ import { styled } from "@mui/material/styles";
 import { Drawer, Button, IconButton, Tooltip } from "@mui/material";
 
 import { FiChevronDown } from 'react-icons/fi';
+import { FaList } from 'react-icons/fa'
+import { BiDetail } from 'react-icons/bi'
+
 import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
 
-// @ts-ignore
 import { drawerWidth } from "../../App.tsx";
 
 import { AiOutlineHome, AiOutlineShopping, AiFillSetting } from 'react-icons/ai'
@@ -19,6 +20,8 @@ import { FiUsers, FiShoppingCart, FiCalendar } from 'react-icons/fi'
 import Settings from './Settings/Settings'
 
 import { NavLink } from 'react-router-dom'
+
+import './Sidebar.css'
 
 const DrawerHeader = styled('div')(({ theme }) => ({
     display: 'flex',
@@ -56,6 +59,7 @@ function Sidebar ({ open }) {
 
     const [expanded, setExpanded] = React.useState(false)
 
+    // @ts-ignore
     return (
         <Drawer
             sx={{
@@ -115,17 +119,22 @@ function Sidebar ({ open }) {
                                 {
                                     ({ isActive }) => (
                                         <>
-                                            <Button className={` ${ isActive && 'text-white bg-info'} d-flex justify-content-start align-items-center `} style={ { padding: '.65rem', borderRadius: 10, fontSize: '1.1rem' } } startIcon={<AiOutlineShopping />} fullWidth onChange={ () => setExpanded( prevState => !prevState)} color={'inherit'}>
-                                                <p className="mb-0 me-4">محصولات</p>
-                                                <div className='position-absolute' style={ { left: 10 } }>
-                                                    <FiChevronDown />
-                                                </div>
-                                            </Button>
-                                            <Accordion epanded={expanded}>
-                                                <AccordionDetails>
-                                                    <Typography>
-
-                                                    </Typography>
+                                            <Accordion className='m-0 p-0' epanded={expanded}>
+                                                <AccordionSummary className='m-0 p-0'>
+                                                    <Button className={` ${ isActive && 'text-white bg-info'} d-flex justify-content-start align-items-center `} style={ { padding: '.65rem', borderRadius: 10, fontSize: '1.1rem' } } startIcon={<AiOutlineShopping size={24} />} fullWidth onChange={ () => setExpanded( prevState => !prevState)} color={'inherit'}>
+                                                        <p className="mb-0 me-4">فروشگاه</p>
+                                                        <div className='position-absolute' style={ { left: 10 } }>
+                                                            <FiChevronDown />
+                                                        </div>
+                                                    </Button>
+                                                </AccordionSummary>
+                                                <AccordionDetails className='px-1 py-0'>
+                                                    <Button className='d-flex justify-content-start align-items-center my-1' style={ { padding: '.65rem', borderRadius: 10, fontSize: '1.1rem' } } startIcon={<FaList size={14} />} fullWidth onChange={ () => setExpanded( prevState => !prevState)} color={'inherit'}>
+                                                        <p className="mb-0 me-4">محصولات</p>
+                                                    </Button>
+                                                    <Button className='d-flex justify-content-start align-items-center mb-1' style={ { padding: '.65rem', borderRadius: 10, fontSize: '1.1rem' } } startIcon={<BiDetail size={16} />} fullWidth onChange={ () => setExpanded( prevState => !prevState)} color={'inherit'}>
+                                                        <p className="mb-0 me-4">جزییات</p>
+                                                    </Button>
                                                 </AccordionDetails>
                                             </Accordion>
                                         </>
