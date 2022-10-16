@@ -5,12 +5,24 @@ import { products } from "../../../Data/data";
 
 import { AiFillStar } from "react-icons/ai";
 import { IoIosEye } from "react-icons/io";
-import { IconButton } from "@mui/material";
-import {Link} from "react-router-dom";
+import { IconButton, Avatar } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const columns = [
 	{ field: 'id', headerName: 'ID', width: 70 },
-	{ field: 'title', headerName: 'Title', width: 130 },
+	{
+		field: 'title',
+		headerName: 'Title',
+		width: 200,
+		renderCell: (params) => {
+			return (
+				<Link className='d-flex justify-content-between align-items-center text-dark w-100' to={`${params.row.id}/${params.row.title.replace(' ', '-')}`}>
+					<Avatar alt={params.row.title} src={`/Images/products/${params.row.image}`} />
+					<p className="h5 mb-0">{params.row.title}</p>
+				</Link>
+			)
+		},
+	},
 	{ field: 'price', headerName: 'Price', width: 130 },
 	{
 		field: 'rate',
