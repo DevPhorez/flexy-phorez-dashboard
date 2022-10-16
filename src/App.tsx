@@ -23,7 +23,7 @@ import { ThemeContext } from './Contexts/ThemeContext'
 
 
 
-const drawerWidth = 240;
+const drawerWidth = 270;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
 	open?: boolean;
@@ -68,6 +68,9 @@ function App () {
             warning: {
                 main: themeVar.warning
             },
+            secondary: {
+                main: themeVar.warning
+            }
         }
     });
 
