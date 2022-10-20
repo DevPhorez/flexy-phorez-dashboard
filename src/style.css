@@ -101,3 +101,8 @@ body {
     border-color: rgba(0, 0, 0, 0.12);
     border-bottom-width: thin;
 }
+
+a {
+    color: var(--dark-gray) !important;
+    font-weight: 700;
+}

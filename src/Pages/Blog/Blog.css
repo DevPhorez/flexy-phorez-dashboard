@@ -1,0 +1,148 @@
+li .settings:hover .arrowRight, li .settings:focus .arrowRight {
+    color: var(--infoHover) !important;
+}
+
+.settings:hover .settingsText, .settings:focus .settingsText {
+    color: var(--infoHover) !important;
+    transform: translateX(-24px) !important;
+}
+
+.arrowRight {
+    transition: .3s !important;
+}
+
+.settings .settingsText {
+    transition: .3s !important;
+}
+
+.settings {
+    margin-bottom: 14px !important;
+}
+
+.avatar {
+    outline: 5px solid #fff;
+    bottom: 120px;
+    right: 15px;
+}
+
+.avatar + p {
+    position: absolute;
+    bottom: 60px;
+    right: 15px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #000;
+}
+
+.avatar + p + p {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.avatar + p + p + p {
+    position: absolute;
+    bottom: 30px;
+    right: 15px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.img-layer {
+    border-radius: 8px;
+    border-bottom-right-radius: 350px;
+}
+
+.text p:not(.title) {
+    line-height: 30px;
+    margin: 10px 0;
+    text-align: justify;
+    color: #394145;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.text .title, .title {
+    font-weight: 700;
+    line-height: 28px;
+    text-align: justify;
+    font-size: 18px ;
+}
+
+.text .title {
+    color: #eb1460;
+    margin: 20px 0;
+}
+
+.comment-item {
+    position: relative;
+    padding-right: 100px;
+}
+
+.right-col {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.right-col img {
+    width: 85px;
+    height: 85px;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    outline: 3px solid #e8ebf2;
+}
+
+.comment {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.no-reapply > .comment, .reapply {
+    border: 1px solid #edf1f4;
+}
+
+.comment .header {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.header p {
+    padding-left: 10px;
+    margin-left: 10px;
+    border-left: 1px solid #e3e9ed;
+    font-size: 14px;
+}
+
+.header span {
+    font-size: 13px;
+    color: #686e71;
+}
+
+.comment .header + p {
+    font-size: 13px;
+    line-height: 26px;
+    text-align: justify;
+    font-weight: 500;
+}
+
+.reapply {
+    margin-top: 1rem;
+}
+
+.reapply .right-col {
+    top: 15px !important;
+    right: 15px !important;
+}
+
+.reapply .right-col img {
+    width: 69px !important;
+    height: 69px !important;
+}
+
+.reapply .comment {
+    padding-right: 0;
+}

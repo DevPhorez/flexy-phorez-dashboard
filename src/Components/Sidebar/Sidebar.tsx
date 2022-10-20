@@ -16,6 +16,7 @@ import { drawerWidth } from "../../App.tsx";
 import { AiOutlineHome, AiOutlineShopping, AiFillSetting } from 'react-icons/ai'
 import { MdOutlineModeComment, MdOutlineLocalOffer } from 'react-icons/md'
 import { FiUsers, FiShoppingCart, FiCalendar } from 'react-icons/fi'
+import { CgNotes } from 'react-icons/cg'
 
 import Settings from './Settings/Settings'
 
@@ -148,6 +149,18 @@ function Sidebar ({ open }) {
                                     ({ isActive }) => (
                                         <Button className={` ${ isActive && 'text-white bg-info'} d-flex justify-content-start align-items-center `} style={ { padding: '.65rem', borderRadius: 10, fontSize: '1.1rem' } } startIcon={<MdOutlineModeComment />} fullWidth color={'inherit'}>
                                             <p className="mb-0 me-4">نظرات</p>
+                                        </Button>
+                                    )
+                                }
+
+                            </NavLink>
+                        </li>
+                        <li className='mb-1'>
+                            <NavLink to='/blog/1/lorem-ipsum' className='text-decoration-none text-dark'>
+                                {
+                                    ({ isActive }) => (
+                                        <Button className={` ${ isActive && 'text-white bg-info'} d-flex justify-content-start align-items-center `} style={ { padding: '.65rem', borderRadius: 10, fontSize: '1.1rem' } } startIcon={<CgNotes />} fullWidth color={'inherit'}>
+                                            <p className="mb-0 me-4">بلاگ</p>
                                         </Button>
                                     )
                                 }
