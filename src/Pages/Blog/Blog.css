@@ -50,7 +50,7 @@ li .settings:hover .arrowRight, li .settings:focus .arrowRight {
     font-size: 14px;
 }
 
-.img-layer {
+.blog-detail .img-layer {
     border-radius: 8px;
     border-bottom-right-radius: 350px;
 }

@@ -105,4 +105,9 @@ body {
 a {
     color: var(--dark-gray) !important;
     font-weight: 700;
+    transition: .3s;
+}
+
+a:hover:not(.no-hover) {
+    color: var(--info) !important;
 }

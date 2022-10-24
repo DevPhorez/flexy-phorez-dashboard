@@ -73,8 +73,8 @@ function Blog () {
 				<div className="col-8 p-0">
 					<Box>
 						<div style={ { paddingTop: '14px' } }>
-							<div className='position-relative'>
-								<img className='w-100 img-layer' src="/Images/blog/1.png" alt="blog"/>
+							<div className='position-relative blog-detail'>
+								<img className='w-100 img-layer' src="/Images/blog/2.png" alt="blog"/>
 								<Avatar className='avatar position-absolute' alt='avatar' src='/Images/Avatar/1.jpg' style={ { width: 100, height: 100 } } />
 								<p><AiOutlineUser /> فورز</p>
 								<p className="text-gray" style={ { direction: 'ltr' } }>1397 / 3 / 7 <FiCalendar size={18} /> </p>

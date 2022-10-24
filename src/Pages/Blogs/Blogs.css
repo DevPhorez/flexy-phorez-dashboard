@@ -1,0 +1,131 @@
+.search {
+    transition: .3s;
+}
+
+.search:hover {
+    color: var(--info) !important;
+}
+
+.blog {
+    overflow: hidden;
+}
+
+.blog .title {
+    padding: 11px 15px 2px;
+}
+
+.blog .title a {
+    height: 40px;
+}
+
+.blog .description {
+    font-weight: 500;
+    padding: 0 15px;
+    margin-top: 4px;
+    line-height: 1.8rem;
+    height: 3.7rem;
+    overflow: hidden;
+    color: #686e71;
+}
+
+.detail {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.detail .author {
+    color: var(--info) !important;
+    font-weight: 700;
+}
+
+.blog .img-layer {
+    background-color: #000;
+    position: relative;
+}
+
+.blog .img-layer img, .blog .img-layer a {
+    transition: .3s;
+}
+
+.blog .img-layer:hover img {
+    opacity: .5;
+}
+
+.blog .img-layer:hover a {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.img-layer a {
+    color: white !important;
+    position: absolute;
+    top: 50%;
+    transform: translate(-65px, -50%);
+    left: 50%;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.img-layer a:after {
+    content: ' ';
+    width: 1px;
+    height: 25px;
+    background: #fff;
+    position: absolute;
+    top: -10px;
+    left: -15px;
+    transition: .3s;
+}
+
+.img-layer a:before {
+    content: ' ';
+    width: 80px;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    top: -10px;
+    left: -15px;
+    transition: .3s;
+}
+
+.img-layer a span:after {
+    content: ' ';
+    width: 1px;
+    height: 25px;
+    background: #fff;
+    position: absolute;
+    top: 10px;
+    left: calc(100% + 15px);
+    transition: .3s;
+}
+
+.img-layer a span:before {
+    content: ' ';
+    width: 80px;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 51%;
+    transition: .3s;
+}
+
+.img-layer a:hover span:after {
+    height: 45px;
+    top: -10px;
+    left: calc(100% + 15px);
+}
+
+.img-layer a:hover span:before {
+    width: 123%;
+    left: -11%;
+}
+
+.img-layer a:hover:after {
+    height: 45px;
+}
+
+.img-layer a:hover:before {
+    width: 123%;
+}
