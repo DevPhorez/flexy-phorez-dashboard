@@ -76,6 +76,7 @@ function Sidebar ({ open }) {
             variant="persistent"
             anchor="right"
             open={open}
+            className={ !open && 'invisible' }
         >
             <DrawerHeader className='position-relative mb-5'>
                 <svg viewBox='0 -8 80 80' className='position-absolute top-0' style={ { left: 80 } }>
