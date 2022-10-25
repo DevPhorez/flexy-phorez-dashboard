@@ -6,6 +6,7 @@ import NewProduct from './Pages/Products/Product/New Product/NewProduct';
 import ProductDetail from './Pages/Products/Product/Product Detail/ProductDetail';
 import Blog from './Pages/Blog/Blog';
 import Blogs from './Pages/Blogs/Blogs';
+import Comments from './Pages/Comments/Comments';
 
 const routes = [
 	{ path: '/', element: <Home /> },
@@ -15,6 +16,7 @@ const routes = [
 	{ path: '/products/:productID/:productTitle', element: <ProductDetail /> },
 	{ path: '/blog', element: <Blogs /> },
 	{ path: '/blog/:blogID/:blogTitle', element: <Blog /> },
+	{ path: '/comments', element: <Comments /> },
 	{ path: '*', element: <NotFound /> },
 ]
 

@@ -1,0 +1,86 @@
+.comment {
+    border: 2px solid transparent;
+    padding: 10px 10px 1px;
+    margin-bottom: 2.5rem;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.comment .comment-text {
+    line-height: 2rem;
+    height: 2rem;
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.comment .sender, .comment .sent-at {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.comment .sender {
+    margin-right: 12px;
+}
+
+.comment .sent-at {
+    margin-left: 22px;
+}
+
+.comment .sent-at span {
+    margin-right: 4px;
+}
+
+.first-color {
+    border-color: rgb(26, 155, 252);
+    background: rgba(26, 155, 252, .2);
+    color: #000;
+}
+
+.second-color {
+    border-color: rgb(0, 206, 195);
+    background: rgba(0, 206, 195, .2);
+    color: var(--main-dark);
+}
+
+.third-color {
+    border-color: rgb(208, 153, 197);
+    background: rgba(208, 153, 197, .2);
+    color: var(--main-dark);
+}
+
+.fourth-color {
+    border-color: rgb(251, 150, 120);
+    background: rgba(251, 150, 120, .2);
+    color: var(--main-dark);
+}
+
+.fifth-color {
+    border-color: rgb(3, 201, 215);
+    background: rgba(3, 201, 215, 0.2);
+    color: var(--main-dark);
+}
+
+.sixth-color {
+    border-color: rgb(81, 191, 160);
+    background: rgba(81, 191, 160, .2);
+    color: var(--main-dark);
+}
+
+.seventh-color {
+    border-color: rgb(237, 28, 36);
+    background: rgba(237, 28, 36, .2);
+    color: var(--main-dark);
+}
+
+.eighth-color {
+    border-color: rgb(224, 19, 110);
+    background: rgba(224, 19, 110, .2);
+    color: var(--main-dark);
+}
+
+.ninth-color {
+    border-color: rgb(202, 194, 177);
+    background: rgba(202, 194, 177, .2);
+    color: var(--main-dark);
+}
