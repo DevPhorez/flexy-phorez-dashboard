@@ -9,3 +9,42 @@
     background: rgba(0, 0, 0, .7) !important;
     color: #fff;
 }
+
+.home-table-parent {
+    border: 1px solid rgba(224, 224, 224, 1);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 2rem;
+    border-collapse: collapse;
+}
+
+.home-table {
+    width: 100%;
+    text-align: center;
+    direction: rtl;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.home-table tr {
+    border-bottom: 1px solid rgba(224, 224, 224, 1);
+}
+
+.home-table tr td, .home-table tr th {
+    padding: 12px 4px;
+}
+
+.home-table tr #name {
+    width: 50%;
+}
+
+.home-table tr #price {
+    width: 12.5%;
+}
+
+.home-table tr #priority {
+    width: 25%;
+}
+
+.home-table tr #price {
+    width: 12.5%;
+}

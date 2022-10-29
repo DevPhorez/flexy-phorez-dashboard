@@ -19,23 +19,31 @@ import TotalSales from "../../Components/Charts/Apex/TotalSales";
 
 function Home () {
 	
-	function createData(assigned, name, priority, budget ) {
-		return { assigned, name, priority, budget };
-	}
+	// function createData(assigned, name, priority, budget ) {
+	// 	return { assigned, name, priority, budget };
+	// }
+	//
+	// const rows = [
+	// 	createData('ماست پرچرب', 159, 'low', '$9.3k\n'),
+	// 	createData('بستنی سالار', 237, 'medium', '$2.4k'),
+	// 	createData('آب هویج بستنی میهن', 262, 'high', '$12.8k'),
+	// 	createData('کاپوچینو', 305, 'critical', '$24.5k'),
+	// 	createData('نون لواش', 356, 'moderate', '$3.9k'),
+	// ];
 	
 	const rows = [
-		createData('ماست پرچرب', 159, 'low', '$9.3k\n'),
-		createData('بستنی سالار', 237, 'medium', '$2.4k'),
-		createData('آب هویج بستنی میهن', 262, 'high', '$12.8k'),
-		createData('کاپوچینو', 305, 'critical', '$24.5k'),
-		createData('نون لواش', 356, 'moderate', '$3.9k'),
+		{ name: 'ماست پرچرب', price: 159, priority: 'low', budget: '$9.3k'},
+		{ name: 'بستنی سالار', price: 237, priority: 'medium', budget: '$2.4k'},
+		{ name: 'آب هویج بستنی', price: 262, priority: 'high', budget: '$12.8k'},
+		{ name: 'کاپوچینو', price: 305, priority: 'critical', budget: '$24.5k'},
+		{ name: 'نون لواش', price: 356, priority: 'moderate', budget: '$3.9k'},
 	];
 	
 	return (
 		<div>
 			<div className="container-fluid">
 				<div className="row">
-					<div className="col-4 p-0">
+					<div className="col-6 col-lg-4 p-0">
 						<Box>
 							<div className="d-flex justify-content-between align-items-center m-3">
 								<IconButton className=' text-white' sx={ { backgroundColor: 'var(--warning)', '&:hover': { backgroundColor: 'var(--warningHover) !important' } } } color='inherit'>
@@ -49,7 +57,7 @@ function Home () {
 							</div>
 						</Box>
 					</div>
-					<div className="col-3 p-0">
+					<div className="col-6 col-lg-3 p-0">
 						<Box>
 							<div className="d-flex justify-content-between align-items-center m-3">
 								<IconButton className='bg-info text-white' sx={ { transition: '.3s' ,'&:hover': { backgroundColor: 'var(--infoHover) !important' } } } color='inherit'>
@@ -63,7 +71,7 @@ function Home () {
 							</div>
 						</Box>
 					</div>
-					<div className="col-5 p-0">
+					<div className="col-12 col-lg-5 p-0">
 						<Box>
 							<div className="d-flex justify-content-between align-items-center m-3">
 								<IconButton className='bg-info text-white' sx={ { transition: '.3s' ,'&:hover': { backgroundColor: 'var(--infoHover) !important' } } } color='inherit'>
@@ -176,49 +184,46 @@ function Home () {
 					</div>
 					<div className="col-12 col-lg-8 p-0">
 						<Box>
-							<div className="card-header rtl m-3">
-								<p className='text-dark fw-bold h5'>عملکرد محصول</p>
-								<div className="w-25">
-									<select className="form-select">
-										<option value="1">مهر 1401</option>
-										<option value="2">آبان 1401</option>
-										<option value="3" selected>آذر 1401</option>
-									</select>
+							<div style={ { height: 513 } }>
+								<div className="card-header rtl m-3">
+									<p className='text-dark fw-bold h5'>عملکرد محصول</p>
+									<div className="w-25">
+										<select className="form-select">
+											<option value="1">مهر 1401</option>
+											<option value="2">آبان 1401</option>
+											<option value="3" selected>آذر 1401</option>
+										</select>
+									</div>
 								</div>
-							</div>
-							<div className="card-body m-3">
-								<TableContainer component={Paper} className='rtl'>
-									<Table sx={{ minWidth: 650 }} aria-label="simple table">
-										<TableHead>
-											<TableRow>
-												<TableCell align="right"><b className='h5 text-gray'>اختصاص داده شده</b></TableCell>
-												<TableCell align="right"><b className='h5 text-gray'>نام</b></TableCell>
-												<TableCell align="right"><b className='h5 text-gray'>الویت</b></TableCell>
-												<TableCell align="right"><b className='h5 text-gray'>بودجه</b></TableCell>
-											</TableRow>
-										</TableHead>
-										<TableBody>
+								<div className="card-body m-3">
+									<div className='home-table-parent'>
+										<table className='home-table'>
+											<tr>
+												<th id='name'>عنوان</th>
+												<th id='price'>قیمت</th>
+												<th id='priority' className='d-none d-md-block m-md-auto'>الویت</th>
+												<th id='budget'>بودجه</th>
+											</tr>
 											{
 												rows.map( row => (
-													<TableRow
-														key={row.name}
-														sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-													>
-														<TableCell className='d-flex justify-content-between align-items-center text-dark fw-bold' sx={ { fontSize: '17px' } } align="right">
-															<div style={ { marginLeft: '6rem' } }>
-																{row.assigned}
-															</div>
+													<tr>
+														<td className='d-flex align-items-center text-dark fw-bold me-2'>
 															<Avatar src="/static/images/avatar/1.jpg" />
-														</TableCell>
-														<TableCell className='text-gray ps-5' align="right">{row.name}</TableCell>
-														<TableCell className='text-gray ps-5' align="right"><p className={`bg-${row.priority} text-center text-white rounded p-1 mb-0`} style={ { fontSize: 12 } }>{row.priority}</p></TableCell>
-														<TableCell className='text-gray ps-5' align="right">{row.budget}</TableCell>
-													</TableRow>
+															<span className='me-2'>
+															{row.name}
+														</span>
+														</td>
+														<td style={ { fontSize: 14 } }>{row.price}</td>
+														<td className='d-none d-md-block'>
+															<p className={`bg-${row.priority} text-center text-white rounded p-1 mb-0 m-auto w-50`} style={ { fontSize: 12 } }>{row.priority}</p>
+														</td>
+														<td style={ { fontSize: 14 } }>{row.budget}</td>
+													</tr>
 												))
 											}
-										</TableBody>
-									</Table>
-								</TableContainer>
+										</table>
+									</div>
+								</div>
 							</div>
 						</Box>
 					</div>
